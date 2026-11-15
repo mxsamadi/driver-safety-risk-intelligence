@@ -1,3 +1,31 @@
+## Project Overview
+
+This project demonstrates an end-to-end machine learning workflow for predicting driver safety incidents using synthetic data.
+
+The objective is to explore how historical driver characteristics, violations, and compliance records can support proactive risk identification and safety review prioritization.
+
+### Explore the Analysis
+
+**Main Notebook:** [Driver Safety Risk Analysis](driver_safety_risk_analysis.ipynb)
+
+The notebook includes:
+
+- Synthetic data generation and exploratory data analysis
+- Feature engineering and preprocessing
+- Logistic Regression and Gradient Boosting model comparison
+- Model evaluation using ROC-AUC, Average Precision, and Brier Score
+- Risk-based driver prioritization using Recall@20%
+- Calibration analysis and business recommendations
+
+### Business Objective
+
+Identify the highest-risk 20% of drivers to help safety teams prioritize reviews and evaluate how effectively predictive modeling concentrates future incidents within limited review capacity.
+
+### Data Disclaimer
+
+This project uses entirely synthetic data generated for educational and portfolio purposes. The findings do not represent actual driver safety patterns or the performance of a real-world safety prediction system.
+
+
 # Driver Safety Risk Intelligence
 
 **Independent portfolio case study | Synthetic data only**
@@ -24,10 +52,10 @@ Prioritize a limited-capacity outreach pilot for drivers with the highest predic
 - Features are all defined as prior-period variables; no post-outcome fields are included.
 
 ## Illustrative holdout results
-- Selected model: **Gradient boosting**
-- Test ROC-AUC: **0.675**; PR-AUC: **0.107** (baseline prevalence ≈ 0.0418)
-- Brier score: **0.039**
-- Top 20% risk segment captures **43%** of simulated incidents; precision **9%**
+- Selected model: **Logistic regression**
+- Test ROC-AUC: **0.698**; PR-AUC: **0.143** (baseline prevalence ≈ 0.0418)
+- Brier score: **0.038**
+- Top 20% risk segment captures **46%** of simulated incidents; precision **10%**
 
 ![Calibration](outputs/calibration.png)
 ![Risk by prior violations](outputs/risk_by_violations.png)
