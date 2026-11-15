@@ -1,0 +1,13 @@
+{
+  "data_type": "synthetic",
+  "n_records": 6500,
+  "event_rate": 0.0418,
+  "selected_model": "Gradient boosting",
+  "selection_criterion": "validation average precision",
+  "test_roc_auc": 0.675,
+  "test_pr_auc": 0.107,
+  "test_brier": 0.039,
+  "top_20pct_recall": 0.426,
+  "top_20pct_precision": 0.088,
+  "test_n": 1300
+}
